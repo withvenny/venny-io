@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/assets/logo-venny.svg" alt="Venny I/O" width="420">
+  <img src="./docs/assets/logo-vennyio.png" alt="Venny I/O" width="420">
 </p>
 
 <p align="center">
@@ -773,5 +773,5 @@ All rights reserved unless otherwise noted.
 ---
 
 <p align="center">
-  <img src="./docs/assets/logo-do-more-with-venny.svg" alt="Do More With Venny" width="520">
+  <img src="./docs/assets/logo-do-more-with-venny.png" alt="Do More With Venny" width="520">
 </p>
