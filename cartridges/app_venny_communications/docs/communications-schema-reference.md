@@ -1,0 +1,23 @@
+# communications schema reference
+
+Primary resource fields:
+
+```text
+communication_id
+communication_attributes
+communication_object_id
+communication_parentobject
+communication_template
+communication_initiatedby
+communication_recipients
+communication_processed
+created_by_user_id
+created_for_app_id
+event_id
+process_id
+access
+status
+active
+time_started
+time_updated
+```

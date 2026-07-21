@@ -1,0 +1,683 @@
+{
+  "info": {
+    "name": "Venny I/O - Commerce",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Commerce",
+      "item": [
+        {
+          "name": "/transactions",
+          "item": [
+            {
+              "name": "GET /transactions",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/transactions",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "transactions"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET /transactions/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/transactions/{{transaction_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "transactions",
+                    "{{transaction_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST /transactions",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/transactions",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "transactions"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction_email\": \"ada@example.com\",\n  \"transaction_firstname\": \"Ada\",\n  \"transaction_lastname\": \"Lovelace\",\n  \"transaction_phone\": \"+15555550100\",\n  \"transaction_currency\": \"usd\",\n  \"transaction_subtotal\": \"100.00\",\n  \"transaction_discount\": \"0.00\",\n  \"transaction_tax\": \"8.25\",\n  \"transaction_total\": \"108.25\",\n  \"transaction_attemptcount\": 0,\n  \"transaction_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_commerce\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PATCH /transactions/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/transactions/{{transaction_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "transactions",
+                    "{{transaction_id}}"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction_attemptcount\": 1,\n  \"transaction_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE /transactions/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/transactions/{{transaction_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "transactions",
+                    "{{transaction_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "/orders",
+          "item": [
+            {
+              "name": "GET /orders",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/orders",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET /orders/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/orders/{{order_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "orders",
+                    "{{order_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST /orders",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/orders",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"order_customer_id\": \"{{customer_id}}\",\n  \"order_totalproduct\": \"100.00\",\n  \"order_totaltax\": \"8.25\",\n  \"order_totalshipping\": \"0.00\",\n  \"order_totaltaxshipping\": \"8.25\",\n  \"order_totaladjustment\": \"0.00\",\n  \"order_description\": \"Example order from Postman.\",\n  \"order_currency\": \"usd\",\n  \"order_locked\": false,\n  \"order_address\": \"123 Example St, Dallas, TX\",\n  \"order_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_commerce\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PATCH /orders/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/orders/{{order_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "orders",
+                    "{{order_id}}"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"order_locked\": true,\n  \"order_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE /orders/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/orders/{{order_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "orders",
+                    "{{order_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "/coupons",
+          "item": [
+            {
+              "name": "GET /coupons",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/coupons",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "coupons"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET /coupons/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/coupons/{{coupon_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "coupons",
+                    "{{coupon_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST /coupons",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/coupons",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "coupons"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"coupon_code\": \"WELCOME10\",\n  \"coupon_description\": \"10 percent off introductory coupon.\",\n  \"coupon_discounttype\": \"percent\",\n  \"coupon_percent\": \"10.00\",\n  \"coupon_currency\": \"usd\",\n  \"coupon_maximumredemptions\": 100,\n  \"coupon_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_commerce\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PATCH /coupons/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/coupons/{{coupon_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "coupons",
+                    "{{coupon_id}}"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"coupon_description\": \"Updated coupon from Postman.\",\n  \"coupon_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE /coupons/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/coupons/{{coupon_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "coupons",
+                    "{{coupon_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "/customers",
+          "item": [
+            {
+              "name": "GET /customers",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/customers",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET /customers/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/customers/{{customer_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    "{{customer_id}}"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST /customers",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/customers",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customer_firstname\": \"Ada\",\n  \"customer_lastname\": \"Lovelace\",\n  \"customer_telephone\": \"+15555550100\",\n  \"customer_email\": \"ada@example.com\",\n  \"customer_initialcontact\": \"now\",\n  \"customer_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_commerce\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PATCH /customers/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/customers/{{customer_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    "{{customer_id}}"
+                  ]
+                },
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customer_telephone\": \"+15555550101\",\n  \"customer_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE /customers/:id",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{api_key}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/customers/{{customer_id}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "customers",
+                    "{{customer_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.example.com"
+    },
+    {
+      "key": "api_key",
+      "value": "paste_generated_key_here"
+    },
+    {
+      "key": "transaction_id",
+      "value": "transaction_replace_me"
+    },
+    {
+      "key": "order_id",
+      "value": "order_replace_me"
+    },
+    {
+      "key": "coupon_id",
+      "value": "coupon_replace_me"
+    },
+    {
+      "key": "customer_id",
+      "value": "customer_replace_me"
+    }
+  ]
+}

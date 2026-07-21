@@ -1,0 +1,10 @@
+{
+  "name": "Account",
+  "description": "Session-scoped account settings facade for Venny I/O.",
+  "item": [
+    {"name":"GET /account"},
+    {"name":"PATCH /account"},
+    {"name":"PATCH /account/password"},
+    {"name":"POST /account/sign-out"}
+  ]
+}

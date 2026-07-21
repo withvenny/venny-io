@@ -1,0 +1,4 @@
+-- app_venny_authentication v1
+-- Optional future index for reset selector lookup:
+-- CREATE INDEX IF NOT EXISTS idx_users_auth_password_reset_selector
+-- ON users ((user_attributes #>> '{auth,password_reset,selector}'));

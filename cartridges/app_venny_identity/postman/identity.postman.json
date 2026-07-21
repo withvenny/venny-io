@@ -1,0 +1,517 @@
+{
+  "item": [
+    {
+      "name": "/persons",
+      "item": [
+        {
+          "name": "/persons",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/persons",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/persons/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/persons/person_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons",
+                "person_abc123"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/persons",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/persons",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"person_firstname\": \"Ada\",\n  \"person_lastname\": \"Lovelace\",\n  \"person_emails\": {\n    \"primary\": \"ada@example.com\"\n  },\n  \"person_phones\": {\n    \"mobile\": \"+15555550100\"\n  },\n  \"person_source\": \"postman\",\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/persons/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/persons/person_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons",
+                "person_abc123"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"person_firstname\": \"Ada Updated\",\n  \"person_lastname\": \"Lovelace\",\n  \"person_emails\": {\n    \"primary\": \"ada@example.com\"\n  },\n  \"person_phones\": {\n    \"mobile\": \"+15555550100\"\n  },\n  \"person_source\": \"postman\",\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/persons/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/persons/person_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons",
+                "person_abc123"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/users",
+      "item": [
+        {
+          "name": "/users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/users/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users/user_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "user_abc123"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"user_username\": \"ada\",\n  \"user_displayname\": \"Ada Lovelace\",\n  \"user_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_identity\"\n  },\n  \"user_theme\": \"salt\",\n  \"user_biopublished\": true,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/users/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/user_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "user_abc123"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"user_username\": \"ada\",\n  \"user_displayname\": \"Ada Updated\",\n  \"user_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_identity\"\n  },\n  \"user_theme\": \"salt\",\n  \"user_biopublished\": true,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/users/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users/user_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "user_abc123"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/profiles",
+      "item": [
+        {
+          "name": "/profiles",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/profiles",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/profiles/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/profiles/profile_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles",
+                "profile_abc123"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/profiles",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/profiles",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"profile_username\": \"ada\",\n  \"profile_displayname\": \"Ada Lovelace\",\n  \"profile_bio\": \"Computing pioneer.\",\n  \"profile_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_identity\"\n  },\n  \"profile_theme\": \"salt\",\n  \"profile_biopublished\": true,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"public\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/profiles/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/profiles/profile_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles",
+                "profile_abc123"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"profile_username\": \"ada\",\n  \"profile_displayname\": \"Ada Updated\",\n  \"profile_bio\": \"Computing pioneer.\",\n  \"profile_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_identity\"\n  },\n  \"profile_theme\": \"salt\",\n  \"profile_biopublished\": true,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"public\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/profiles/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/profiles/profile_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles",
+                "profile_abc123"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

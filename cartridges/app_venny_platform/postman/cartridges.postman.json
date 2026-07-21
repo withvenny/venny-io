@@ -1,0 +1,60 @@
+{
+  "name": "/cartridges",
+  "item": [
+    {
+      "name": "/cartridges",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/cartridges",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "cartridges"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/cartridges/:name",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/cartridges/app_venny_platform",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "cartridges",
+            "app_venny_platform"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,649 @@
+{
+  "name": "Storefront",
+  "item": [
+    {
+      "name": "/catalogs",
+      "item": [
+        {
+          "name": "GET /catalogs",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/catalogs",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "catalogs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /catalogs/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/catalogs/{{catalog_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "catalogs",
+                "{{catalog_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /catalogs",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/catalogs",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "catalogs"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"catalog_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_storefront\"\n  },\n  \"catalog_online\": true,\n  \"catalog_public\": true,\n  \"catalog_name\": \"Default Catalog\",\n  \"catalog_description\": \"Primary storefront catalog.\",\n  \"catalog_slug\": \"default-catalog\",\n  \"catalog_images\": [],\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"public\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /catalogs/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/catalogs/{{catalog_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "catalogs",
+                "{{catalog_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"catalog_name\": \"Updated Default Catalog\",\n  \"catalog_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /catalogs/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/catalogs/{{catalog_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "catalogs",
+                "{{catalog_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/categories",
+      "item": [
+        {
+          "name": "GET /categories",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /categories/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/categories/{{category_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories",
+                "{{category_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /categories",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"category_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_storefront\"\n  },\n  \"category_catalog_id\": \"{{catalog_id}}\",\n  \"category_online\": true,\n  \"category_public\": true,\n  \"category_name\": \"Featured\",\n  \"category_description\": \"Featured storefront category.\",\n  \"category_slug\": \"featured\",\n  \"category_images\": [],\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"public\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /categories/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/categories/{{category_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories",
+                "{{category_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"category_name\": \"Updated Featured\",\n  \"category_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /categories/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/categories/{{category_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories",
+                "{{category_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/products",
+      "item": [
+        {
+          "name": "GET /products",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /products/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/{{product_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "{{product_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /products",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_storefront\"\n  },\n  \"product_catalog_id\": \"{{catalog_id}}\",\n  \"product_category_id\": \"{{category_id}}\",\n  \"product_online\": true,\n  \"product_public\": true,\n  \"product_name\": \"Example Product\",\n  \"product_description\": \"Example storefront product.\",\n  \"product_slug\": \"example-product\",\n  \"product_images\": [],\n  \"product_sku\": \"SKU-EXAMPLE-001\",\n  \"product_base_price\": \"49.00\",\n  \"product_inventory\": 100,\n  \"product_manufacturer\": \"Venny I/O\",\n  \"product_weight\": 1,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"public\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /products/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/{{product_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "{{product_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_name\": \"Updated Example Product\",\n  \"product_inventory\": 95,\n  \"product_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /products/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/products/{{product_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "{{product_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/items",
+      "item": [
+        {
+          "name": "GET /items",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/items",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "items"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /items/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/items/{{item_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "items",
+                "{{item_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /items",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/items",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "items"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"item_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_storefront\"\n  },\n  \"item_catalog_id\": \"{{catalog_id}}\",\n  \"item_category_id\": \"{{category_id}}\",\n  \"item_product_id\": \"{{product_id}}\",\n  \"item_serial_number\": \"ITEM-001\",\n  \"item_quantity\": 1,\n  \"item_sale_price\": \"49.00\",\n  \"item_size\": 1,\n  \"item_color\": \"black\",\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /items/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/items/{{item_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "items",
+                "{{item_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"item_quantity\": 2,\n  \"item_sale_price\": \"45.00\",\n  \"item_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /items/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/items/{{item_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "items",
+                "{{item_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

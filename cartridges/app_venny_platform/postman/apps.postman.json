@@ -1,0 +1,68 @@
+{
+  "name": "app_venny_platform - Apps",
+  "item": [
+    {
+      "name": "GET /apps",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{api_key}}"
+          }
+        ],
+        "url": "{{base_url}}/apps"
+      }
+    },
+    {
+      "name": "GET /apps/:id",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{api_key}}"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/apps/:id",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "apps",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "app_8301",
+              "description": "Concrete apps.app_id"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST /apps",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url}}/apps",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"app_name\": \"Example App\",\n  \"app_slug\": \"example-app\",\n  \"app_description\": \"Example Venny I/O app created through POST /apps.\",\n  \"app_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"app_environment\": \"production\",\n  \"app_type\": \"installed\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}"
+        }
+      }
+    }
+  ]
+}

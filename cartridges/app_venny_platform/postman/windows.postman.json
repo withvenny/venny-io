@@ -1,0 +1,161 @@
+{
+  "name": "/windows",
+  "item": [
+    {
+      "name": "/windows",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/windows",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "windows"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/windows/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/windows/window_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "windows",
+            "window_REPLACE_ME"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/windows",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/windows",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "windows"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"window_key_id\": \"key_REPLACE_ME\",\n  \"window_start\": \"2026-07-02T00:00:00Z\",\n  \"window_end\": \"2026-07-02T00:01:00Z\",\n  \"window_count\": 0,\n  \"window_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/windows/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/windows/window_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "windows",
+            "window_REPLACE_ME"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"window_count\": 1,\n  \"status\": \"active\",\n  \"active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/windows/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/windows/window_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "windows",
+            "window_REPLACE_ME"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+-- app_venny_communications constraints
+
+SELECT venny_add_constraint('communications', 'ck_communications_active_binary', 'CHECK (active IN (0, 1))');
+SELECT venny_add_constraint('deliveries', 'ck_deliveries_active_binary', 'CHECK (active IN (0, 1))');
+SELECT venny_add_constraint('threads', 'ck_threads_active_binary', 'CHECK (active IN (0, 1))');
+SELECT venny_add_constraint('messages', 'ck_messages_active_binary', 'CHECK (active IN (0, 1))');
+SELECT venny_add_constraint('communications', 'ck_communications_status_nonblank', 'CHECK (btrim(status) <> '''')');
+SELECT venny_add_constraint('deliveries', 'ck_deliveries_status_nonblank', 'CHECK (btrim(status) <> '''')');
+SELECT venny_add_constraint('threads', 'ck_threads_status_nonblank', 'CHECK (btrim(status) <> '''')');
+SELECT venny_add_constraint('messages', 'ck_messages_status_nonblank', 'CHECK (btrim(status) <> '''')');
+SELECT venny_add_constraint('communications', 'ck_communications_attributes_object', 'CHECK (jsonb_typeof(communication_attributes) = ''object'')');
+SELECT venny_add_constraint('deliveries', 'ck_deliveries_attributes_object', 'CHECK (jsonb_typeof(delivery_attributes) = ''object'')');
+SELECT venny_add_constraint('threads', 'ck_threads_attributes_object', 'CHECK (jsonb_typeof(thread_attributes) = ''object'')');
+SELECT venny_add_constraint('messages', 'ck_messages_attributes_object', 'CHECK (jsonb_typeof(message_attributes) = ''object'')');
+SELECT venny_add_constraint('communications', 'fk_communications_created_for_app', 'FOREIGN KEY (created_for_app_id) REFERENCES apps(app_id) ON UPDATE CASCADE ON DELETE RESTRICT NOT VALID');
+SELECT venny_add_constraint('deliveries', 'fk_deliveries_created_for_app', 'FOREIGN KEY (created_for_app_id) REFERENCES apps(app_id) ON UPDATE CASCADE ON DELETE RESTRICT NOT VALID');
+SELECT venny_add_constraint('threads', 'fk_threads_created_for_app', 'FOREIGN KEY (created_for_app_id) REFERENCES apps(app_id) ON UPDATE CASCADE ON DELETE RESTRICT NOT VALID');
+SELECT venny_add_constraint('messages', 'fk_messages_created_for_app', 'FOREIGN KEY (created_for_app_id) REFERENCES apps(app_id) ON UPDATE CASCADE ON DELETE RESTRICT NOT VALID');
+SELECT venny_add_constraint('communications', 'fk_communications_initiated_by', 'FOREIGN KEY (communication_initiatedby) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE RESTRICT NOT VALID');
+SELECT venny_add_constraint('communications', 'ck_communications_recipients_json', 'CHECK (jsonb_typeof(communication_recipients) IN (''array'', ''object''))');
+SELECT venny_add_constraint('deliveries', 'fk_deliveries_communication', 'FOREIGN KEY (delivery_communication) REFERENCES communications(communication_id) ON UPDATE CASCADE ON DELETE CASCADE NOT VALID');
+SELECT venny_add_constraint('deliveries', 'ck_deliveries_channel_nonblank', 'CHECK (btrim(delivery_channel) <> '''')');
+SELECT venny_add_constraint('deliveries', 'ck_deliveries_attempts_nonnegative', 'CHECK (delivery_attempts >= 0)');
+SELECT venny_add_constraint('deliveries', 'ck_deliveries_metadata_object', 'CHECK (jsonb_typeof(delivery_metadata) = ''object'')');
+SELECT venny_add_constraint('threads', 'fk_threads_author', 'FOREIGN KEY (thread_author_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE RESTRICT NOT VALID');
+SELECT venny_add_constraint('threads', 'ck_threads_subject_nonblank', 'CHECK (btrim(thread_subject) <> '''')');
+SELECT venny_add_constraint('threads', 'ck_threads_participants_json', 'CHECK (jsonb_typeof(thread_participants) IN (''array'', ''object''))');
+SELECT venny_add_constraint('messages', 'fk_messages_thread', 'FOREIGN KEY (thread_id) REFERENCES threads(thread_id) ON UPDATE CASCADE ON DELETE CASCADE NOT VALID');
+SELECT venny_add_constraint('messages', 'fk_messages_sender', 'FOREIGN KEY (message_sender_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE RESTRICT NOT VALID');
+SELECT venny_add_constraint('messages', 'ck_messages_body_nonblank', 'CHECK (btrim(message_body) <> '''')');
+SELECT venny_add_constraint('messages', 'ck_messages_attachments_json', 'CHECK (jsonb_typeof(message_attachments) IN (''array'', ''object''))');
+SELECT venny_add_constraint('messages', 'ck_messages_readby_json', 'CHECK (jsonb_typeof(message_readby) IN (''array'', ''object''))');
+SELECT venny_add_constraint('coupons', 'fk_coupons_thread', 'FOREIGN KEY (thread_id) REFERENCES threads(thread_id) ON UPDATE CASCADE ON DELETE RESTRICT NOT VALID');
+-- ALTER TABLE messages VALIDATE CONSTRAINT fk_messages_thread;

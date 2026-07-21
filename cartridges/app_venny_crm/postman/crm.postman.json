@@ -1,0 +1,1454 @@
+{
+  "name": "CRM",
+  "item": [
+    {
+      "name": "/contacts",
+      "item": [
+        {
+          "name": "GET /contacts",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contacts",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "contacts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /contacts/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contacts/{{contact_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "contacts",
+                "{{contact_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /contacts",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contacts",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "contacts"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"contact_firstname\": \"Ada\",\n  \"contact_lastname\": \"Lovelace\",\n  \"contact_emails\": {\n    \"primary\": \"ada@example.com\"\n  },\n  \"contact_phones\": {\n    \"mobile\": \"+15555550100\"\n  },\n  \"contact_company_id\": \"{{company_id}}\",\n  \"contact_source\": {\n    \"source\": \"postman\"\n  },\n  \"contact_title\": \"Advisor\",\n  \"contact_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /contacts/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contacts/{{contact_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "contacts",
+                "{{contact_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"contact_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"contact_title\": \"Updated Advisor\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /contacts/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contacts/{{contact_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "contacts",
+                "{{contact_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/companies",
+      "item": [
+        {
+          "name": "GET /companies",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/companies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "companies"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /companies/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/companies/{{company_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "companies",
+                "{{company_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /companies",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/companies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "companies"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_name\": \"Example Company\",\n  \"company_website\": \"https://example.com\",\n  \"company_industry\": \"Technology\",\n  \"company_phone\": \"+15555550100\",\n  \"company_city\": \"Dallas\",\n  \"company_state\": \"TX\",\n  \"company_country\": \"US\",\n  \"company_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /companies/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/companies/{{company_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "companies",
+                "{{company_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"company_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"company_name\": \"Updated Example Company\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /companies/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/companies/{{company_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "companies",
+                "{{company_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/deals",
+      "item": [
+        {
+          "name": "GET /deals",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/deals",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "deals"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /deals/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/deals/{{deal_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "deals",
+                "{{deal_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /deals",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/deals",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "deals"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deal_contact_id\": \"{{contact_id}}\",\n  \"deal_pipeline_id\": \"{{pipeline_id}}\",\n  \"deal_company_id\": \"{{company_id}}\",\n  \"deal_stage_id\": \"{{stage_id}}\",\n  \"deal_amount\": \"25000.00\",\n  \"deal_expectedclosedate\": \"2026-12-31\",\n  \"deal_status\": \"open\",\n  \"deal_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /deals/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/deals/{{deal_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "deals",
+                "{{deal_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deal_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"deal_status\": \"negotiating\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /deals/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/deals/{{deal_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "deals",
+                "{{deal_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/pipelines",
+      "item": [
+        {
+          "name": "GET /pipelines",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/pipelines",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pipelines"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /pipelines/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/pipelines/{{pipeline_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pipelines",
+                "{{pipeline_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /pipelines",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/pipelines",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pipelines"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pipeline_name\": \"Default Sales Pipeline\",\n  \"pipeline_description\": \"Default CRM pipeline.\",\n  \"pipeline_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /pipelines/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/pipelines/{{pipeline_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pipelines",
+                "{{pipeline_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pipeline_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"pipeline_description\": \"Updated CRM pipeline.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /pipelines/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/pipelines/{{pipeline_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "pipelines",
+                "{{pipeline_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/stages",
+      "item": [
+        {
+          "name": "GET /stages",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/stages",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "stages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /stages/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/stages/{{stage_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "stages",
+                "{{stage_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /stages",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/stages",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "stages"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stage_pipeline_id\": \"{{pipeline_id}}\",\n  \"stage_name\": \"Qualified\",\n  \"stage_position\": 10,\n  \"stage_probability\": 25,\n  \"stage_is_closed\": false,\n  \"stage_is_won\": false,\n  \"stage_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /stages/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/stages/{{stage_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "stages",
+                "{{stage_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stage_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"stage_probability\": 50\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /stages/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/stages/{{stage_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "stages",
+                "{{stage_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/activities",
+      "item": [
+        {
+          "name": "GET /activities",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/activities",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "activities"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /activities/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/activities/{{activity_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "activities",
+                "{{activity_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /activities",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/activities",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "activities"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"activity_related_id\": \"{{contact_id}}\",\n  \"activity_contact_id\": \"{{contact_id}}\",\n  \"activity_company_id\": \"{{company_id}}\",\n  \"activity_deal_id\": \"{{deal_id}}\",\n  \"activity_related_type\": \"contact\",\n  \"activity_activity_type\": \"call\",\n  \"activity_subject\": \"Intro call\",\n  \"activity_body\": \"Discussed the opportunity and next steps.\",\n  \"activity_occurred_at\": \"2026-07-02T00:00:00Z\",\n  \"activity_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /activities/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/activities/{{activity_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "activities",
+                "{{activity_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"activity_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"activity_subject\": \"Updated intro call\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /activities/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/activities/{{activity_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "activities",
+                "{{activity_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/tasks",
+      "item": [
+        {
+          "name": "GET /tasks",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tasks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /tasks/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks/{{task_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tasks",
+                "{{task_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /tasks",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tasks"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"task_assigned_to_user_id\": \"user_8301\",\n  \"task_contact_id\": \"{{contact_id}}\",\n  \"task_company_id\": \"{{company_id}}\",\n  \"task_deal_id\": \"{{deal_id}}\",\n  \"task_title\": \"Follow up\",\n  \"task_description\": \"Send follow-up note and next step options.\",\n  \"task_due_at\": \"2026-07-09T00:00:00Z\",\n  \"task_priority\": \"normal\",\n  \"task_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /tasks/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks/{{task_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tasks",
+                "{{task_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"task_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"task_priority\": \"high\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /tasks/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tasks/{{task_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tasks",
+                "{{task_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/notes",
+      "item": [
+        {
+          "name": "GET /notes",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/notes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /notes/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/notes/{{note_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notes",
+                "{{note_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /notes",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/notes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notes"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"note_contact_id\": \"{{contact_id}}\",\n  \"note_company_id\": \"{{company_id}}\",\n  \"note_deal_id\": \"{{deal_id}}\",\n  \"note_body\": \"This is an example CRM note.\",\n  \"note_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /notes/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/notes/{{note_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notes",
+                "{{note_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"note_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"note_body\": \"Updated CRM note.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /notes/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/notes/{{note_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notes",
+                "{{note_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/tags",
+      "item": [
+        {
+          "name": "GET /tags",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tags",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tags"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /tags/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tags/{{tag_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tags",
+                "{{tag_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /tags",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tags",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tags"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tag_related_id\": \"{{contact_id}}\",\n  \"tag_contact_id\": \"{{contact_id}}\",\n  \"tag_name\": \"capital-ready\",\n  \"tag_type\": \"crm\",\n  \"tag_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_crm\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /tags/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tags/{{tag_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tags",
+                "{{tag_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tag_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"tag_name\": \"updated-capital-ready\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /tags/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/tags/{{tag_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tags",
+                "{{tag_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

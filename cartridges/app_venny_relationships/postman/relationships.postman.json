@@ -1,0 +1,327 @@
+{
+  "name": "Relationships",
+  "item": [
+    {
+      "name": "/followships",
+      "item": [
+        {
+          "name": "GET /followships",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/followships",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "followships"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /followships/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/followships/{{followship_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "followships",
+                "{{followship_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /followships",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/followships",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "followships"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"followship_sender_id\": \"user_8301\",\n  \"followship_recipient_id\": \"user_replace_me\",\n  \"followship_status\": \"requested\",\n  \"followship_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_relationships\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /followships/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/followships/{{followship_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "followships",
+                "{{followship_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"followship_status\": \"accepted\",\n  \"followship_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /followships/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/followships/{{followship_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "followships",
+                "{{followship_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/groups",
+      "item": [
+        {
+          "name": "GET /groups",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "groups"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /groups/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups/{{group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "groups",
+                "{{group_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /groups",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "groups"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"group_sender_id\": \"user_8301\",\n  \"group_recipient_id\": \"user_replace_me\",\n  \"group_title\": \"Founders Circle\",\n  \"group_headline\": \"Private relationship group.\",\n  \"group_access\": \"private\",\n  \"group_participants\": {\n    \"users\": [\n      \"user_8301\",\n      \"user_replace_me\"\n    ]\n  },\n  \"group_images\": {\n    \"avatar_asset_id\": null,\n    \"cover_asset_id\": null\n  },\n  \"group_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_relationships\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /groups/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups/{{group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "groups",
+                "{{group_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"group_headline\": \"Updated private relationship group.\",\n  \"group_participants\": {\n    \"users\": [\n      \"user_8301\",\n      \"user_replace_me\"\n    ],\n    \"updated\": true\n  },\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /groups/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/groups/{{group_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "groups",
+                "{{group_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

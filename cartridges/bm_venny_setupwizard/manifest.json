@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "name": "bm_venny_setupwizard",
+  "type": "bm",
+  "provider": "venny",
+  "domain": "setupwizard",
+  "version": "1.0.0",
+  "priority": 900,
+  "requires": [
+    "app_venny_platform"
+  ],
+  "routes": "routes.php",
+  "sql": {
+    "experience_matrix": "sql/experience-matrix.csv"
+  }
+}

@@ -1,0 +1,2 @@
+-- app_venny_authentication v1
+-- No new tables. This cartridge uses users.user_passwordhash, users.user_attributes, and sessions.

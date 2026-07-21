@@ -1,0 +1,166 @@
+{
+  "name": "Posts",
+  "item": [
+    {
+      "name": "/posts",
+      "item": [
+        {
+          "name": "GET /posts",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/posts",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /posts/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/posts/{{post_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts",
+                "{{post_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /posts",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/posts",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"post_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_posts\"\n  },\n  \"post_object_id\": \"user_8301\",\n  \"post_parent_object_id\": null,\n  \"post_body\": \"This is an example Venny I/O post.\",\n  \"post_images\": [],\n  \"post_closed\": false,\n  \"post_deleted\": false,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /posts/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/posts/{{post_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts",
+                "{{post_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"post_body\": \"Updated Venny I/O post body.\",\n  \"post_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  },\n  \"post_closed\": false,\n  \"post_deleted\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /posts/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/posts/{{post_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "posts",
+                "{{post_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

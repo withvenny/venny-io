@@ -1,0 +1,161 @@
+{
+  "name": "/steps",
+  "item": [
+    {
+      "name": "/steps",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/steps",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "steps"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/steps/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/steps/step_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "steps",
+            "step_REPLACE_ME"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/steps",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/steps",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "steps"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"step_name\": \"Create platform tables\",\n  \"step_order\": 10,\n  \"step_status\": \"pending\",\n  \"step_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"step_summary\": {},\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/steps/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/steps/step_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "steps",
+            "step_REPLACE_ME"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"step_status\": \"completed\",\n  \"step_finished_at\": \"now\",\n  \"step_summary\": {\n    \"result\": \"completed from Postman\"\n  },\n  \"status\": \"active\",\n  \"active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/steps/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/steps/step_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "steps",
+            "step_REPLACE_ME"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

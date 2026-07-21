@@ -1,0 +1,161 @@
+{
+  "name": "/sessions",
+  "item": [
+    {
+      "name": "/sessions",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/sessions",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "sessions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/sessions/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/sessions/session_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "sessions",
+            "session_REPLACE_ME"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/sessions",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/sessions",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "sessions"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"session_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"session_user_id\": null,\n  \"session_expiresat\": \"+30 days\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/sessions/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/sessions/session_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "sessions",
+            "session_REPLACE_ME"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"session_lastseenat\": \"now\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/sessions/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/sessions/session_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "sessions",
+            "session_REPLACE_ME"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

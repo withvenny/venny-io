@@ -1,0 +1,1591 @@
+{
+  "info": {
+    "_postman_id": "4e347239-6575-4baf-9f63-c1eac8d63d59",
+    "name": "Venny I/O",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "19616890",
+    "_collection_link": "https://go.postman.co/collection/19616890-4e347239-6575-4baf-9f63-c1eac8d63d59?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "/health",
+      "item": [
+        {
+          "name": "/health",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/apps",
+      "item": [
+        {
+          "name": "/apps",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/apps",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "apps"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/apps/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/apps/app_58fd08256a7d",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "apps",
+                "app_58fd08256a7d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/apps",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"app_name\": \"New Example App\",\n  \"app_slug\": \"New-example-app\",\n  \"app_description\": \"Example Venny I/O app created through POST /apps.\",\n  \"app_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"app_environment\": \"production\",\n  \"app_type\": \"installed\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/apps",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "apps"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/apps/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"app_name\": \"Example Mobile App\",\n  \"app_slug\": \"example-mobile-app\",\n  \"app_description\": \"Example Venny I/O app created through POST /apps.\",\n  \"app_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"app_environment\": \"production\",\n  \"app_type\": \"installed\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/apps/app_58fd08256a7d",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "apps",
+                "app_58fd08256a7d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/apps/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/apps/app_58fd08256a7d",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "apps",
+                "app_58fd08256a7d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/keys",
+      "item": [
+        {
+          "name": "GET /keys",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/keys",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "keys"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /keys/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/keys/{{key_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "keys",
+                "{{key_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST /keys",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_name\": \"Postman Dev Key\",\n  \"key_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"key_ratelimit\": 1000,\n  \"key_windowsize\": 60,\n  \"key_expires\": null,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/keys",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "keys"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH /keys/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_name\": \"Postman Dev Key Updated\",\n  \"key_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\",\n    \"updated\": true\n  },\n  \"key_ratelimit\": 1500,\n  \"key_windowsize\": 60,\n  \"key_expires\": null,\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/keys/{{key_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "keys",
+                "{{key_id}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE /keys/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/keys/{{key_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "keys",
+                "{{key_id}}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "/cartridges",
+      "item": [
+        {
+          "name": "/cartridges",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/cartridges",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "cartridges"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/cartridges/:name",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/cartridges/app_venny_platform",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "cartridges",
+                "app_venny_platform"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/installations",
+      "item": [
+        {
+          "name": "/installations",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/installations",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "installations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/installations/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/installations/installation_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "installations",
+                "installation_REPLACE_ME"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/installations",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/installations",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "installations"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"installation_experience\": \"CRM App\",\n  \"installation_modules\": [\n    \"app_venny_platform\",\n    \"app_venny_identity\",\n    \"app_venny_crm\"\n  ],\n  \"installation_status\": \"pending\",\n  \"installation_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"installation_summary\": {},\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/installations/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/installations/installation_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "installations",
+                "installation_REPLACE_ME"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"installation_status\": \"completed\",\n  \"installation_finished_at\": \"now\",\n  \"installation_summary\": {\n    \"result\": \"completed from Postman\"\n  },\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/installations/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/installations/installation_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "installations",
+                "installation_REPLACE_ME"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/steps",
+      "item": [
+        {
+          "name": "/steps",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/steps",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "steps"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/steps/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/steps/step_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "steps",
+                "step_REPLACE_ME"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/steps",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/steps",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "steps"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"step_name\": \"Create platform tables\",\n  \"step_order\": 10,\n  \"step_status\": \"pending\",\n  \"step_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"step_summary\": {},\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/steps/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/steps/step_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "steps",
+                "step_REPLACE_ME"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"step_status\": \"completed\",\n  \"step_finished_at\": \"now\",\n  \"step_summary\": {\n    \"result\": \"completed from Postman\"\n  },\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/steps/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/steps/step_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "steps",
+                "step_REPLACE_ME"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/windows",
+      "item": [
+        {
+          "name": "/windows",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/windows",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "windows"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/windows/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/windows/window_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "windows",
+                "window_REPLACE_ME"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/windows",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/windows",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "windows"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"window_key_id\": \"key_REPLACE_ME\",\n  \"window_start\": \"2026-07-02T00:00:00Z\",\n  \"window_end\": \"2026-07-02T00:01:00Z\",\n  \"window_count\": 0,\n  \"window_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/windows/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/windows/window_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "windows",
+                "window_REPLACE_ME"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"window_count\": 1,\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/windows/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/windows/window_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "windows",
+                "window_REPLACE_ME"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/sessions",
+      "item": [
+        {
+          "name": "/sessions",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/sessions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sessions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/sessions/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/sessions/session_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sessions",
+                "session_REPLACE_ME"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/sessions",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/sessions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sessions"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"session_user_id\": null,\n  \"session_expiresat\": \"+30 days\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/sessions/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/sessions/session_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sessions",
+                "session_REPLACE_ME"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_lastseenat\": \"now\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/sessions/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/sessions/session_REPLACE_ME",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sessions",
+                "session_REPLACE_ME"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/persons",
+      "item": [
+        {
+          "name": "/persons",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/persons",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/persons/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/persons/person_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons",
+                "person_abc123"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/persons",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/persons",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"person_firstname\": \"Ada\",\n  \"person_lastname\": \"Lovelace\",\n  \"person_emails\": {\n    \"primary\": \"ada@example.com\"\n  },\n  \"person_phones\": {\n    \"mobile\": \"+15555550100\"\n  },\n  \"person_source\": \"postman\",\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/persons/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/persons/person_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons",
+                "person_abc123"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"person_firstname\": \"Ada Updated\",\n  \"person_lastname\": \"Lovelace\",\n  \"person_emails\": {\n    \"primary\": \"ada@example.com\"\n  },\n  \"person_phones\": {\n    \"mobile\": \"+15555550100\"\n  },\n  \"person_source\": \"postman\",\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/persons/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/persons/person_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "persons",
+                "person_abc123"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/users",
+      "item": [
+        {
+          "name": "/users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/users/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users/user_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "user_abc123"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"user_username\": \"ada\",\n  \"user_displayname\": \"Ada Lovelace\",\n  \"user_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_identity\"\n  },\n  \"user_theme\": \"salt\",\n  \"user_biopublished\": true,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/users/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/user_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "user_abc123"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"user_username\": \"ada\",\n  \"user_displayname\": \"Ada Updated\",\n  \"user_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_identity\"\n  },\n  \"user_theme\": \"salt\",\n  \"user_biopublished\": true,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/users/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/users/user_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "user_abc123"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/profiles",
+      "item": [
+        {
+          "name": "/profiles",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/profiles",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/profiles/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/profiles/profile_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles",
+                "profile_abc123"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/profiles",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/profiles",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"profile_username\": \"ada\",\n  \"profile_displayname\": \"Ada Lovelace\",\n  \"profile_bio\": \"Computing pioneer.\",\n  \"profile_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_identity\"\n  },\n  \"profile_theme\": \"salt\",\n  \"profile_biopublished\": true,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"public\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/profiles/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/profiles/profile_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles",
+                "profile_abc123"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"profile_username\": \"ada\",\n  \"profile_displayname\": \"Ada Updated\",\n  \"profile_bio\": \"Computing pioneer.\",\n  \"profile_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_identity\"\n  },\n  \"profile_theme\": \"salt\",\n  \"profile_biopublished\": true,\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"public\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/profiles/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/profiles/profile_abc123",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "profiles",
+                "profile_abc123"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.example.com"
+    },
+    {
+      "key": "api_key",
+      "value": "paste_generated_key_here"
+    },
+    {
+      "key": "key_id",
+      "value": "key_replace_me"
+    }
+  ]
+}

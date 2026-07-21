@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "name": "app_venny_storefront",
+  "type": "app",
+  "provider": "venny",
+  "domain": "storefront",
+  "version": "1.0.0",
+  "priority": 600,
+  "requires": [
+    "app_venny_platform",
+    "app_venny_cms"
+  ],
+  "routes": "routes.php",
+  "sql": {
+    "schema": "sql/schema.sql",
+    "constraints": "sql/constraints.sql",
+    "indexes": "sql/indexes.sql"
+  }
+}

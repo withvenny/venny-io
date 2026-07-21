@@ -1,0 +1,327 @@
+{
+  "name": "Chat",
+  "item": [
+    {
+      "name": "/threads",
+      "item": [
+        {
+          "name": "GET /threads",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/threads",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "threads"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /threads/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/threads/{{thread_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "threads",
+                "{{thread_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /threads",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/threads",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "threads"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"thread_subject\": \"Welcome conversation\",\n  \"thread_participants\": {\n    \"users\": [\n      \"user_8301\"\n    ],\n    \"contacts\": [\n      \"{{contact_id}}\"\n    ]\n  },\n  \"thread_author_id\": \"user_8301\",\n  \"thread_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_chat\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /threads/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/threads/{{thread_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "threads",
+                "{{thread_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"thread_lastmessagepreview\": \"Thanks for reaching out.\",\n  \"thread_lastmessageat\": \"now\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /threads/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/threads/{{thread_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "threads",
+                "{{thread_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/messages",
+      "item": [
+        {
+          "name": "GET /messages",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/messages",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "messages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /messages/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/messages/{{message_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "messages",
+                "{{message_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /messages",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/messages",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "messages"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"thread_id\": \"{{thread_id}}\",\n  \"message_sender_id\": \"user_8301\",\n  \"message_body\": \"Thanks for reaching out.\",\n  \"message_attachments\": {},\n  \"message_readby\": {},\n  \"message_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_chat\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /messages/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/messages/{{message_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "messages",
+                "{{message_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message_body\": \"Updated message body.\",\n  \"message_readby\": {\n    \"user_8301\": \"now\"\n  },\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /messages/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/messages/{{message_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "messages",
+                "{{message_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

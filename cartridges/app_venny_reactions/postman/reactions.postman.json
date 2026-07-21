@@ -1,0 +1,327 @@
+{
+  "name": "Reactions",
+  "item": [
+    {
+      "name": "/acknowledgements",
+      "item": [
+        {
+          "name": "GET /acknowledgements",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/acknowledgements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "acknowledgements"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /acknowledgements/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/acknowledgements/{{acknowledgement_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "acknowledgements",
+                "{{acknowledgement_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /acknowledgements",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/acknowledgements",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "acknowledgements"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"acknowledgement_object_id\": \"{{post_id}}\",\n  \"acknowledgement_parent_object_id\": null,\n  \"acknowledgement_type\": \"like\",\n  \"acknowledgement_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_reactions\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /acknowledgements/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/acknowledgements/{{acknowledgement_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "acknowledgements",
+                "{{acknowledgement_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"acknowledgement_type\": \"approved\",\n  \"acknowledgement_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /acknowledgements/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/acknowledgements/{{acknowledgement_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "acknowledgements",
+                "{{acknowledgement_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/comments",
+      "item": [
+        {
+          "name": "GET /comments",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/comments",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /comments/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/comments/{{comment_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comments",
+                "{{comment_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /comments",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/comments",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comments"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"comment_object_id\": \"{{post_id}}\",\n  \"comment_parent_object_id\": null,\n  \"comment_body\": \"This is an example comment.\",\n  \"comment_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_reactions\"\n  },\n  \"created_for_app_id\": \"app_8301\",\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH /comments/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/comments/{{comment_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comments",
+                "{{comment_id}}"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"comment_body\": \"Updated example comment.\",\n  \"comment_attributes\": {\n    \"source\": \"postman\",\n    \"updated\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE /comments/:id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/comments/{{comment_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comments",
+                "{{comment_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

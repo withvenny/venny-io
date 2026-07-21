@@ -1,0 +1,161 @@
+{
+  "name": "/installations",
+  "item": [
+    {
+      "name": "/installations",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/installations",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "installations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/installations/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/installations/installation_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "installations",
+            "installation_REPLACE_ME"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/installations",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/installations",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "installations"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"installation_experience\": \"CRM App\",\n  \"installation_modules\": [\n    \"app_venny_platform\",\n    \"app_venny_identity\",\n    \"app_venny_crm\"\n  ],\n  \"installation_status\": \"pending\",\n  \"installation_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_platform\"\n  },\n  \"installation_summary\": {},\n  \"access\": \"private\",\n  \"status\": \"active\",\n  \"active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/installations/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/installations/installation_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "installations",
+            "installation_REPLACE_ME"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"installation_status\": \"completed\",\n  \"installation_finished_at\": \"now\",\n  \"installation_summary\": {\n    \"result\": \"completed from Postman\"\n  },\n  \"status\": \"active\",\n  \"active\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/installations/:id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{api_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/installations/installation_REPLACE_ME",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "installations",
+            "installation_REPLACE_ME"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
