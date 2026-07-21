@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/assets/logo-vennyio.png" alt="Venny I/O" width="420">
+  <img src="./docs/assets/logo-venny-io.png" alt="Venny I/O">
 </p>
 
 <p align="center">
@@ -760,7 +760,7 @@ A contribution should make the platform easier to understand, safer to operate, 
 
 # Contributors
 
-Venny I/O is created and maintained by **[@sonofadolphus](https://github.com/sonofadolphus)**.
+Venny I/O is created and maintained by **[@sonofadolphus](http://linkedin.com/in/al-nolan/details/certifications/adolphus)**.
 
 ---
 
@@ -773,5 +773,5 @@ All rights reserved unless otherwise noted.
 ---
 
 <p align="center">
-  <img src="./docs/assets/logo-do-more-with-venny.png" alt="Do More With Venny" width="520">
+  <img src="./docs/assets/logo-do-more-with-venny.png" alt="Do More With Venny">
 </p>
