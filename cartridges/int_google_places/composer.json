@@ -1,0 +1,16 @@
+{
+  "name": "venny-io/int-google-places",
+  "description": "Venny I/O Google Maps Platform Places API (New) integration cartridge.",
+  "type": "library",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Venny\\Cartridges\\GooglePlaces\\": "src/"
+    }
+  }
+}

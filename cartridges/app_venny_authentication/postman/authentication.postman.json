@@ -13,7 +13,7 @@
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"password\": \"correct-horse-battery-staple\",\n  \"password_confirmation\": \"correct-horse-battery-staple\",\n  \"user_username\": \"ada\",\n  \"user_displayname\": \"Ada Lovelace\",\n  \"user_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_authentication\"\n  }\n}",
+          "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"password\": \"{{user_password}}\",\n  \"password_confirmation\": \"{{user_password}}\",\n  \"user_username\": \"ada\",\n  \"user_displayname\": \"Ada Lovelace\",\n  \"user_attributes\": {\n    \"source\": \"postman\",\n    \"cartridge\": \"app_venny_authentication\"\n  }\n}",
           "options": { "raw": { "language": "json" } }
         },
         "url": { "raw": "{{base_url}}/sign-up", "host": ["{{base_url}}"], "path": ["sign-up"] }
@@ -28,7 +28,7 @@
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"password\": \"correct-horse-battery-staple\"\n}",
+          "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"password\": \"{{user_password}}\"\n}",
           "options": { "raw": { "language": "json" } }
         },
         "url": { "raw": "{{base_url}}/sign-in", "host": ["{{base_url}}"], "path": ["sign-in"] }
@@ -73,7 +73,7 @@
         "header": [{ "key": "Content-Type", "value": "application/json" }],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"reset_token\": \"selector.secret\",\n  \"password\": \"new-correct-horse-battery-staple\",\n  \"password_confirmation\": \"new-correct-horse-battery-staple\"\n}",
+          "raw": "{\n  \"reset_token\": \"{{reset_token}}\",\n  \"password\": \"{{new_password}}\",\n  \"password_confirmation\": \"{{new_password}}\"\n}",
           "options": { "raw": { "language": "json" } }
         },
         "url": { "raw": "{{base_url}}/reset-password", "host": ["{{base_url}}"], "path": ["reset-password"] }
@@ -83,7 +83,7 @@
   ],
   "variable": [
     { "key": "base_url", "value": "https://api.withvenny.app" },
-    { "key": "api_key", "value": "paste_generated_key_here" },
+    { "key": "api_key", "value": "" },
     { "key": "user_id", "value": "user_replace_me" },
     { "key": "session_id", "value": "session_replace_me" }
   ]

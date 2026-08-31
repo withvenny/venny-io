@@ -1759,7 +1759,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"user_email\": \"notio.test.004@example.com\",\n  \"password\": \"Password123!\",\n  \"password_confirmation\": \"Password123!\",\n  \"user_username\": \"notio_test_004\",\n  \"user_displayname\": \"Notio Test User\",\n  \"first_name\": \"Notio\",\n  \"last_name\": \"User\",\n  \"phone\": \"+15555550100\",\n  \"address\": {\n    \"line1\": \"123 Example St\",\n    \"line2\": \"\",\n    \"city\": \"Dallas\",\n    \"state\": \"TX\",\n    \"postal_code\": \"75201\",\n    \"country\": \"US\"\n  },\n  \"profile_username\": \"notio_test_004\",\n  \"profile_displayname\": \"Notio Test User\",\n  \"profile_bio\": \"Example Venny I/O profile.\",\n  \"social\": {\n    \"x\": \"@notio_test_004\",\n    \"linkedin\": \"https://www.linkedin.com/in/example\"\n  },\n  \"user_optins\": {\n    \"product_updates\": true,\n    \"marketing\": false,\n    \"security\": true,\n    \"release_notes\": true\n  },\n  \"user_attributes\": {\n    \"source\": \"postman\",\n    \"app\": \"withvenny\",\n    \"cartridge\": \"app_venny_authentication\"\n  }\n}",
+              "raw": "{\n  \"user_email\": \"notio.test.004@example.com\",\n  \"password\": \"{{user_password}}\",\n  \"password_confirmation\": \"{{user_password}}\",\n  \"user_username\": \"notio_test_004\",\n  \"user_displayname\": \"Notio Test User\",\n  \"first_name\": \"Notio\",\n  \"last_name\": \"User\",\n  \"phone\": \"+15555550100\",\n  \"address\": {\n    \"line1\": \"123 Example St\",\n    \"line2\": \"\",\n    \"city\": \"Dallas\",\n    \"state\": \"TX\",\n    \"postal_code\": \"75201\",\n    \"country\": \"US\"\n  },\n  \"profile_username\": \"notio_test_004\",\n  \"profile_displayname\": \"Notio Test User\",\n  \"profile_bio\": \"Example Venny I/O profile.\",\n  \"social\": {\n    \"x\": \"@notio_test_004\",\n    \"linkedin\": \"https://www.linkedin.com/in/example\"\n  },\n  \"user_optins\": {\n    \"product_updates\": true,\n    \"marketing\": false,\n    \"security\": true,\n    \"release_notes\": true\n  },\n  \"user_attributes\": {\n    \"source\": \"postman\",\n    \"app\": \"withvenny\",\n    \"cartridge\": \"app_venny_authentication\"\n  }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1801,7 +1801,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"password\": \"correct-horse-battery-staple\"\n}",
+              "raw": "{\n  \"user_email\": \"ada@example.com\",\n  \"password\": \"{{user_password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1924,7 +1924,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"token\": \"TOKEN_FROM_REQUEST_PASSWORD_IF_EXPOSED_IN_DEV\",\n  \"password\": \"NewPassword123!\",\n  \"password_confirmation\": \"NewPassword123!\"\n}",
+              "raw": "{\n  \"token\": \"{{reset_token}}\",\n  \"password\": \"{{new_password}}\",\n  \"password_confirmation\": \"{{new_password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -2056,7 +2056,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"current_password\": \"Password123!\",\n  \"password\": \"NewPassword123!\",\n  \"password_confirmation\": \"NewPassword123!\"\n}",
+              "raw": "{\n  \"current_password\": \"{{user_password}}\",\n  \"password\": \"{{new_password}}\",\n  \"password_confirmation\": \"{{new_password}}\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -7415,7 +7415,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"user_email\": \"notio.test.004@example.com\",\n    \"password\": \"Password123!\"\n  }",
+          "raw": "{\n    \"user_email\": \"notio.test.004@example.com\",\n    \"password\": \"{{user_password}}\"\n  }",
           "options": {
             "raw": {
               "language": "json"
@@ -7434,7 +7434,7 @@
             "sign-in"
           ]
         },
-        "description": "Generated from cURL: curl -i -X POST https://api.withvenny.app/sign-in \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"user_email\": \"notio.test.004@example.com\",\n    \"password\": \"Password123!\"\n  }'"
+        "description": "Generated from cURL: curl -i -X POST https://api.withvenny.app/sign-in \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"user_email\": \"notio.test.004@example.com\",\n    \"password\": \"{{user_password}}\"\n  }'"
       },
       "response": []
     },
@@ -7480,7 +7480,7 @@
     },
     {
       "key": "api_key",
-      "value": "paste_generated_key_here"
+      "value": ""
     },
     {
       "key": "key_id",

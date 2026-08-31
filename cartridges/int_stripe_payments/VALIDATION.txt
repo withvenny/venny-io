@@ -1,0 +1,18 @@
+README purpose characters: 679
+README purpose >= 280: PASS
+
+PHP syntax validation:
+bm/configuration.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/bm/configuration.php
+bm/health.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/bm/health.php
+bm/metadata.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/bm/metadata.php
+src/Client.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Client.php
+src/Config.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Config.php
+src/Exceptions/AuthenticationException.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Exceptions/AuthenticationException.php
+src/Exceptions/ConfigurationException.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Exceptions/ConfigurationException.php
+src/Exceptions/ProviderException.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Exceptions/ProviderException.php
+src/Exceptions/RateLimitException.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Exceptions/RateLimitException.php
+src/Exceptions/ValidationException.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Exceptions/ValidationException.php
+src/Exceptions/WebhookException.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Exceptions/WebhookException.php
+src/Provider.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/Provider.php
+src/ProviderResult.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/src/ProviderResult.php
+tests/smoke.php: PASS - No syntax errors detected in /mnt/data/int_stripe_payments/tests/smoke.php

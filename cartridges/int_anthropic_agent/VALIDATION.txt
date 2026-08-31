@@ -1,0 +1,16 @@
+README purpose characters: 997
+README purpose >= 280: PASS
+Business Manager metadata exists: PASS
+Business Manager key setup instructions: PASS
+
+bm/configuration.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/bm/configuration.php
+bm/health.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/bm/health.php
+bm/metadata.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/bm/metadata.php
+src/Config.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/src/Config.php
+src/Exceptions/ConfigurationException.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/src/Exceptions/ConfigurationException.php
+src/Exceptions/ProviderException.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/src/Exceptions/ProviderException.php
+src/Exceptions/ValidationException.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/src/Exceptions/ValidationException.php
+src/Provider.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/src/Provider.php
+src/ProviderResult.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/src/ProviderResult.php
+tests/smoke.php: PASS - No syntax errors detected in /mnt/data/int_anthropic_agent_sdk/tests/smoke.php
+agent/runner.mjs: PASS - Node syntax OK

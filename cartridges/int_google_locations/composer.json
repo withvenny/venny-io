@@ -1,0 +1,16 @@
+{
+  "name": "venny-io/int-google-locations",
+  "description": "Venny I/O Google Maps Platform Geocoding API integration cartridge.",
+  "type": "library",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Venny\\Cartridges\\GoogleLocations\\": "src/"
+    }
+  }
+}

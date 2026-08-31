@@ -1,0 +1,16 @@
+README purpose characters: 684
+README purpose >= 280: PASS
+
+bm/configuration.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/bm/configuration.php
+bm/health.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/bm/health.php
+bm/metadata.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/bm/metadata.php
+src/Client.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/Client.php
+src/Config.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/Config.php
+src/Exceptions/AuthenticationException.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/Exceptions/AuthenticationException.php
+src/Exceptions/ConfigurationException.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/Exceptions/ConfigurationException.php
+src/Exceptions/NotFoundException.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/Exceptions/NotFoundException.php
+src/Exceptions/ProviderException.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/Exceptions/ProviderException.php
+src/Exceptions/ValidationException.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/Exceptions/ValidationException.php
+src/Provider.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/Provider.php
+src/ProviderResult.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/src/ProviderResult.php
+tests/smoke.php: PASS - No syntax errors detected in /mnt/data/int_aws_s3/tests/smoke.php

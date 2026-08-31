@@ -1,0 +1,15 @@
+{
+  "name": "venny-io/int-aws-s3",
+  "description": "Venny I/O Amazon S3 object-storage integration cartridge.",
+  "type": "library",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "aws/aws-sdk-php": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Venny\\Cartridges\\AwsS3\\": "src/"
+    }
+  }
+}
