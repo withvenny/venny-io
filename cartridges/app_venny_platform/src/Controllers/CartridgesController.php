@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace VennyIO\Controllers;
 
+use VennyIO\Kernel\CartridgeRegistry;
 use VennyIO\Support\Response;
 
 final class CartridgesController
@@ -29,36 +30,40 @@ final class CartridgesController
         Response::json(404, false, 'cartridge not found', []);
     }
 
+    /**
+     * @return array<int, array<string, mixed>>
+     */
     private function allManifests(): array
     {
-        $enabled = require $this->basePath . '/config/cartridges.php';
-        $enabled = is_array($enabled) ? $enabled : [];
+        $registry = new CartridgeRegistry($this->basePath);
         $rows = [];
 
-        foreach (glob($this->basePath . '/cartridges/*/cartridge.php') ?: [] as $manifestPath) {
-            $manifest = require $manifestPath;
-            if (!is_array($manifest)) {
-                continue;
-            }
-
-            $name = (string) ($manifest['name'] ?? basename(dirname($manifestPath)));
-            $routesPath = (string) ($manifest['routes'] ?? '');
-            $routes = $this->extractRouteSummary($routesPath);
+        foreach ($registry->ordered() as $manifest) {
+            $name = (string) ($manifest['name'] ?? '');
+            $routesPath = is_string($manifest['routes'] ?? null) ? (string) $manifest['routes'] : '';
 
             $rows[] = [
+                'manifest_version' => $manifest['manifest_version'] ?? null,
                 'name' => $name,
                 'type' => $manifest['type'] ?? null,
                 'provider' => $manifest['provider'] ?? null,
                 'domain' => $manifest['domain'] ?? null,
                 'version' => $manifest['version'] ?? null,
+                'description' => $manifest['description'] ?? null,
+                'tool' => $manifest['tool'] ?? null,
+                'tool_url' => $manifest['tool_url'] ?? null,
+                'php' => $manifest['php'] ?? null,
                 'requires' => $manifest['requires'] ?? [],
-                'enabled' => in_array($name, $enabled, true),
-                'routes' => $routes,
+                'installed' => true,
+                'enabled' => true,
+                'routes' => $this->extractRouteSummary($routesPath),
                 'sql' => $manifest['sql'] ?? [],
+                'configuration' => $manifest['configuration'] ?? [],
+                'capabilities' => $manifest['capabilities'] ?? [],
+                'dependencies' => $manifest['dependencies'] ?? [],
             ];
         }
 
-        usort($rows, static fn (array $a, array $b): int => strcmp((string) $a['name'], (string) $b['name']));
         return $rows;
     }
 

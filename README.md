@@ -139,109 +139,15 @@ The standard API response shape is:
 
 # Cartridge Architecture
 
-A cartridge is a self-contained application capability.
+Venny I/O 2.0 uses the `/cartridges` filesystem as the only cartridge registry. There is no `config/cartridges.php` activation list.
 
-A typical cartridge looks like this:
+A cartridge is recognized when a directory exists under `/cartridges` and contains a valid `cartridge.php` manifest. The runtime validates every manifest, resolves `requires[]` dependencies, detects missing dependencies and cycles, determines boot order, registers cartridge autoload roots, and loads declared routes.
 
-```text
-cartridges/app_venny_example/
-├── manifest.json
-├── cartridge.php
-├── routes.php
-├── src/
-├── sql/
-├── postman/
-├── assets/
-└── docs/
-```
+Every cartridge uses the same top-level manifest contract. Application, integration, and Business Manager cartridges differ in scope and behavior, not in how Venny discovers or boots them.
 
-Not every cartridge must use every directory, but every cartridge must provide a valid `manifest.json`.
+SQL declarations remain cartridge-owned, but SQL is installed only through Business Manager. Runtime startup never executes cartridge SQL.
 
-## Cartridge Manifest
-
-The manifest is the contract between the cartridge and the Venny I/O runtime.
-
-```json
-{
-  "schema_version": "1.0",
-  "cartridge": "app_venny_crm",
-  "name": "CRM",
-  "version": "1.0.0",
-  "dependencies": [
-    "app_venny_platform",
-    "app_venny_identity"
-  ],
-  "bootstrap": "cartridge.php",
-  "routes": "routes.php"
-}
-```
-
-The manifest describes the cartridge. It does not maintain a separate enabled or disabled runtime state.
-
-If a valid cartridge is present in the application, Venny I/O attempts to resolve and load it.
-
-## Automatic Discovery
-
-Venny I/O does not require cartridges to be manually registered in a central configuration file.
-
-At startup, the runtime:
-
-1. scans the `/cartridges` directory
-2. locates every `manifest.json`
-3. validates each manifest
-4. detects duplicate cartridge names
-5. resolves dependencies
-6. detects circular dependencies
-7. determines the correct load order
-8. loads cartridge bootstrap files
-9. registers cartridge routes
-
-The runtime does not use `VENNY_DISABLED_CARTRIDGES`, an installed-but-disabled state, or a separate application-level activation registry.
-
-A standards-compliant cartridge is recognized because it exists and describes itself correctly.
-
-## Dependency Resolution
-
-Cartridges may depend on other cartridges.
-
-For example:
-
-```json
-{
-  "cartridge": "app_venny_authentication",
-  "dependencies": [
-    "app_venny_platform",
-    "app_venny_identity"
-  ]
-}
-```
-
-The runtime resolves dependencies before loading routes or bootstrap files. This ensures that foundational capabilities are available before dependent cartridges start.
-
-A typical load order is:
-
-```text
-app_venny_platform
-app_venny_identity
-app_venny_authentication
-app_venny_account
-app_venny_crm
-app_venny_communications
-```
-
-If a cartridge cannot be resolved or loaded successfully, startup fails clearly. More advanced recovery and partial-installation patterns can be introduced separately without complicating the current runtime model.
-
-## Runtime Cache
-
-The runtime may cache the resolved cartridge map to reduce repeated filesystem work.
-
-```text
-storage/cache/cartridges.php
-```
-
-The cache is an optimization only. Cartridge manifests remain the source of truth.
-
----
+See `docs/cartridge-runtime-v2.md` for the complete Runtime 2.0 contract.
 
 # Security
 

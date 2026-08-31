@@ -1,0 +1,19 @@
+README purpose characters: 886
+README purpose >= 280: PASS
+Business Manager metadata exists: PASS
+Business Manager per-key setup instructions: PASS
+
+bm/configuration.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/bm/configuration.php
+bm/health.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/bm/health.php
+bm/metadata.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/bm/metadata.php
+src/Client.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Client.php
+src/Config.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Config.php
+src/Exceptions/AuthenticationException.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Exceptions/AuthenticationException.php
+src/Exceptions/ConfigurationException.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Exceptions/ConfigurationException.php
+src/Exceptions/ProviderException.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Exceptions/ProviderException.php
+src/Exceptions/RateLimitException.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Exceptions/RateLimitException.php
+src/Exceptions/ValidationException.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Exceptions/ValidationException.php
+src/Exceptions/WebhookException.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Exceptions/WebhookException.php
+src/Provider.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/Provider.php
+src/ProviderResult.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/src/ProviderResult.php
+tests/smoke.php: PASS - No syntax errors detected in /mnt/data/int_sendgrid_email/tests/smoke.php

@@ -1,0 +1,18 @@
+README purpose characters: 1054
+README purpose >= 280: PASS
+Business Manager metadata exists: PASS
+Business Manager key setup instructions: PASS
+
+bm/configuration.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/bm/configuration.php
+bm/health.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/bm/health.php
+bm/metadata.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/bm/metadata.php
+src/Client.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/Client.php
+src/Config.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/Config.php
+src/Exceptions/AuthenticationException.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/Exceptions/AuthenticationException.php
+src/Exceptions/ConfigurationException.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/Exceptions/ConfigurationException.php
+src/Exceptions/ProviderException.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/Exceptions/ProviderException.php
+src/Exceptions/QuotaException.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/Exceptions/QuotaException.php
+src/Exceptions/ValidationException.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/Exceptions/ValidationException.php
+src/Provider.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/Provider.php
+src/ProviderResult.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/src/ProviderResult.php
+tests/smoke.php: PASS - No syntax errors detected in /mnt/data/int_google_locations/tests/smoke.php

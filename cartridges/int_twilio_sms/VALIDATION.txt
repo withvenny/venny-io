@@ -1,0 +1,19 @@
+README purpose characters: 876
+README purpose >= 280: PASS
+Business Manager metadata exists: PASS
+Business Manager per-key setup instructions: PASS
+
+bm/configuration.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/bm/configuration.php
+bm/health.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/bm/health.php
+bm/metadata.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/bm/metadata.php
+src/Client.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Client.php
+src/Config.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Config.php
+src/Exceptions/AuthenticationException.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Exceptions/AuthenticationException.php
+src/Exceptions/ConfigurationException.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Exceptions/ConfigurationException.php
+src/Exceptions/ProviderException.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Exceptions/ProviderException.php
+src/Exceptions/RateLimitException.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Exceptions/RateLimitException.php
+src/Exceptions/ValidationException.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Exceptions/ValidationException.php
+src/Exceptions/WebhookException.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Exceptions/WebhookException.php
+src/Provider.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/Provider.php
+src/ProviderResult.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/src/ProviderResult.php
+tests/smoke.php: PASS - No syntax errors detected in /mnt/data/int_twilio_sms/tests/smoke.php

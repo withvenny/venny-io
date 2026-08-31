@@ -20,8 +20,8 @@ Creates a user in `users`, stores `user_passwordhash`, creates a session, and re
 ```json
 {
   "user_email": "ada@example.com",
-  "password": "correct-horse-battery-staple",
-  "password_confirmation": "correct-horse-battery-staple",
+  "password": "{{user_password}}",
+  "password_confirmation": "{{user_password}}",
   "user_username": "ada",
   "user_displayname": "Ada Lovelace",
   "user_attributes": {
@@ -55,7 +55,7 @@ Validates email/password, updates `user_lastlogin`, creates a session, and retur
 ```json
 {
   "user_email": "ada@example.com",
-  "password": "correct-horse-battery-staple"
+  "password": "{{user_password}}"
 }
 ```
 
@@ -102,8 +102,8 @@ Validates the reset token, updates `user_passwordhash`, clears the reset token m
 
 ```json
 {
-  "reset_token": "selector.secret",
-  "password": "new-correct-horse-battery-staple",
-  "password_confirmation": "new-correct-horse-battery-staple"
+  "reset_token": "{{reset_token}}",
+  "password": "{{new_password}}",
+  "password_confirmation": "{{new_password}}"
 }
 ```

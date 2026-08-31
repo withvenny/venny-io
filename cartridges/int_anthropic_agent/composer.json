@@ -1,0 +1,14 @@
+{
+  "name": "venny-io/int-anthropic-agent-sdk",
+  "description": "Venny I/O PHP bridge for Anthropic Claude Agent SDK.",
+  "type": "library",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Venny\\Cartridges\\AnthropicAgentSdk\\": "src/"
+    }
+  }
+}

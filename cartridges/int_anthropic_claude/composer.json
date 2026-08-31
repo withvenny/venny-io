@@ -1,0 +1,16 @@
+{
+  "name": "venny-io/int-anthropic-claude",
+  "description": "Venny I/O Anthropic Claude API integration cartridge.",
+  "type": "library",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "anthropic-ai/sdk": "^0.44.0",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Venny\\Cartridges\\AnthropicClaude\\": "src/"
+    }
+  }
+}

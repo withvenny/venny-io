@@ -51,8 +51,9 @@ try {
     $request = Request::capture();
     $router = new Router();
 
-    // Every standards-compliant cartridge in /cartridges is discovered and loaded automatically.
-    (new CartridgeLoader(dirname(__DIR__)))->loadAvailable($router);
+    // The filesystem is the cartridge registry. Every valid directory under
+    // /cartridges is discovered and loaded in dependency-safe order.
+    (new CartridgeLoader(dirname(__DIR__)))->load($router);
     $router->dispatch($request);
 } catch (Throwable $throwable) {
     error_log($throwable->getMessage());
